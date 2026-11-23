@@ -18,7 +18,7 @@ def test_health(client):
 
 def test_add_task(client):
     response = client.post("/api/tasks", json={"title": "CI/CD lab"})
-    assert response.status_code == 201
+    assert response.status_code == 202
     assert response.get_json()["title"] == "CI/CD lab"
 
 
